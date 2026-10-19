@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Controle de Acesso RFID | TECNOVA</title>
+  <link rel="stylesheet" href="projetos.css">
+  <style>:root { --cor-projeto: #20baff; }</style>
+</head>
+<body>
+<header class="topo">
+  <div class="container topo-conteudo">
+    <a class="marca" href="../index.html">
+      <span class="marca-simbolo">T</span><span>TEC<span>NOVA</span></span>
+    </a>
+    <nav class="navegacao" aria-label="Navegação principal">
+      <a href="../index.html">Início</a>
+      <a href="../index.html#projetos">Projetos</a>
+      <a href="#funcionamento">Funcionamento</a>
+      <a href="#codigo">Código</a>
+    </nav>
+    <a class="botao-voltar" href="../index.html#projetos">← Voltar aos projetos</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero-projeto">
+    <div class="container hero-grade">
+      <div>
+        <span class="sobretitulo"><span class="ponto"></span> PROJETO 01 · AUTOMAÇÃO</span>
+        <h1>Controle de acesso <span>com cartão RFID.</span></h1>
+        <p class="hero-descricao">
+          Como transformar um cartão em uma chave digital? Neste projeto,
+          o Arduino trabalha com um leitor RFID para identificar cartões
+          e simular a liberação de uma entrada.
+        </p>
+        <div class="hero-acoes">
+          <a class="botao-principal" href="#simulador">Experimentar simulação →</a>
+          <a class="botao-secundario" href="#componentes">Ver componentes</a>
+        </div>
+        <div class="indicadores">
+          <div class="indicador"><strong>RFID</strong><span>Identificação por radiofrequência</span></div>
+          <div class="indicador"><strong>Arduino</strong><span>Controle do sistema</span></div>
+          <div class="indicador"><strong>Automação</strong><span>Resposta conforme o cartão</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="visual-icone">💳</div>
+        <span class="visual-legenda">CARTÃO · LEITOR · CONTROLE DE ACESSO</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao">
+    <div class="container grade-dois">
+      <article class="painel">
+        <span class="sobretitulo">01 · CONCEITO</span>
+        <h3>O que é RFID?</h3>
+        <p>
+          RFID significa identificação por radiofrequência. Um leitor
+          comunica-se com uma etiqueta ou cartão compatível para obter
+          seu identificador. O controlador compara esse identificador
+          com os dados autorizados e decide qual resposta executar.
+        </p>
+      </article>
+      <article class="painel">
+        <span class="sobretitulo">02 · OBJETIVO</span>
+        <h3>O que vamos construir?</h3>
+        <p>
+          Um protótipo didático que reconhece cartões previamente
+          cadastrados e indica acesso permitido ou negado. Em uma
+          montagem física, um LED ou uma fechadura apropriada pode
+          representar a resposta do sistema.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="secao" id="componentes">
+    <div class="container">
+      <div class="secao-cabecalho">
+        <span class="sobretitulo">MATERIAIS E PREPARAÇÃO</span>
+        <h2>Componentes do projeto</h2>
+        <p>Confira o que cada componente faz antes de montar o protótipo.</p>
+      </div>
+      <div class="grade-dois">
+        <article class="painel">
+          <h3>Hardware necessário</h3>
+          <ul class="lista">
+            <li>Arduino Uno ou placa compatível.</li>
+            <li>Leitor RFID compatível, como o MFRC522.</li>
+            <li>Cartão ou chaveiro RFID compatível com o leitor.</li>
+            <li>LEDs e resistores para sinalizar o resultado.</li>
+            <li>Protoboard e fios jumper.</li>
+            <li>Cabo USB e computador com Arduino IDE.</li>
+          </ul>
+        </article>
+        <article class="painel">
+          <h3>Conhecimentos utilizados</h3>
+          <ul class="lista">
+            <li>Entradas e saídas digitais.</li>
+            <li>Comunicação entre placa e módulo.</li>
+            <li>Condicionais: permitido ou negado.</li>
+            <li>Leitura e comparação de identificadores.</li>
+            <li>Testes e depuração de um protótipo.</li>
+          </ul>
+          <p class="aviso" style="margin-top:18px">
+            Atenção: o MFRC522 normalmente utiliza lógica de 3,3 V.
+            Confira a tensão e a ligação indicadas na documentação
+            do módulo antes de conectar a placa.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao" id="funcionamento">
+    <div class="container">
+      <div class="secao-cabecalho">
+        <span class="sobretitulo">ETAPAS DO SISTEMA</span>
+        <h2>Como funciona?</h2>
+        <p>O processo começa quando o cartão é aproximado do leitor.</p>
+      </div>
+      <div class="passos">
+        <article class="passo"><h3>Leitura do cartão</h3><p>O leitor RFID detecta um cartão compatível e obtém seu identificador.</p></article>
+        <article class="passo"><h3>Verificação</h3><p>O controlador compara o identificador com os cartões autorizados cadastrados.</p></article>
+        <article class="passo"><h3>Resposta</h3><p>O sistema apresenta o resultado e, na montagem real, aciona a saída correspondente.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao" id="simulador">
+    <div class="container">
+      <div class="secao-cabecalho">
+        <span class="sobretitulo">LABORATÓRIO INTERATIVO</span>
+        <h2>Teste o controle de acesso</h2>
+        <p>Escolha um cartão e observe a resposta simulada. Isto não controla uma fechadura real.</p>
+      </div>
+      <div class="simulador">
+        <div class="simulador-topo">
+          <h3>Leitor RFID virtual</h3>
+          <span id="acesso-status" class="status">Aguardando cartão</span>
+        </div>
+        <div class="simulador-area">
+          <span class="simulador-icone">📡</span>
+          <strong id="acesso-mensagem">Aproxime um cartão virtual para iniciar o teste.</strong>
+          <p>Selecione uma das opções abaixo.</p>
+        </div>
+        <div class="simulador-botoes">
+          <button class="botao-principal" data-acesso="permitir">💳 Cartão autorizado</button>
+          <button class="botao-secundario" data-acesso="negar">🚫 Cartão não autorizado</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao" id="codigo">
+    <div class="container">
+      <div class="secao-cabecalho">
+        <span class="sobretitulo">PROGRAMAÇÃO</span>
+        <h2>Exemplo de lógica em Arduino</h2>
+        <p>
+          O trecho abaixo demonstra a decisão de autorização. Ele é um
+          exemplo didático de lógica, não um programa completo para o
+          MFRC522: a leitura real do cartão e a configuração dos pinos
+          precisam ser implementadas para o hardware escolhido.
+        </p>
+      </div>
+      <div class="codigo-caixa">
+        <div class="codigo-topo">
+          <span>Arduino / C++ · exemplo de decisão</span>
+          <button class="botao-copiar" data-copiar="codigo-rfid">Copiar código</button>
+        </div>
+        <pre><code id="codigo-rfid">const String cartaoAutorizado = "A1B2C3D4";
+
+bool verificarCartao(String identificador) {
+  return identificador == cartaoAutorizado;
+}
+
+void processarLeitura(String identificador) {
+  if (verificarCartao(identificador)) {
+    Serial.println("Acesso autorizado");
+    // Exemplo: sinalizar com LED verde.
+  } else {
+    Serial.println("Acesso negado");
+    // Exemplo: sinalizar com LED vermelho.
+  }
+}
+
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  // Integre aqui a leitura do módulo RFID.
+}</code></pre>
+      </div>
+      <p class="aviso" style="margin-top:16px">
+        Em uma aplicação real, não use apenas o UID do cartão como
+        proteção de alto nível: identificadores podem ser copiados.
+        Adote mecanismos de autenticação adequados ao risco.
+      </p>
+    </div>
+  </section>
+
+  <section class="secao">
+    <div class="container">
+      <div class="secao-cabecalho">
+        <span class="sobretitulo">APLICAÇÕES E APRENDIZADO</span>
+        <h2>Onde essa tecnologia pode ser usada?</h2>
+      </div>
+      <div class="grade-dois">
+        <article class="painel"><h3>Aplicações possíveis</h3><p>Controle de entrada em laboratórios, identificação de materiais, registro de empréstimos e protótipos de acesso a ambientes.</p></article>
+        <article class="painel"><h3>O que você aprende</h3><p>Comunicação entre dispositivos, leitura de dados, lógica condicional, integração de hardware e cuidados básicos de segurança.</p></article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="container rodape-conteudo">
+    <span>© <span data-ano></span> TECNOVA · Tecnologia hoje, soluções amanhã.</span>
+    <a href="../index.html#projetos">← Conhecer outros projetos</a>
+  </div>
+</footer>
+<script src="projetos.js"></script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TECNOVA — projetos de Arduino, automação e tecnologia.">
+  <title>TECNOVA | Tecnologia em prática</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <!-- MENU -->
+  <header class="site-header" id="inicio">
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio">
+        <span class="brand-mark">T<span>+</span></span>
+        <span>TECNO<span class="gradient-text">VA</span></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Menu principal">
+        <a class="nav-link active" href="#inicio">Início</a>
+        <a class="nav-link" href="#projetos">Projetos</a>
+      </nav>
+
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- APRESENTAÇÃO -->
+    <section class="hero">
+      <div class="hero-grid"></div>
+
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="status-dot"></span>
+            AUTOMAÇÃO <i>·</i> ARDUINO <i>·</i> INOVAÇÃO
+          </p>
+
+          <h1>
+            Projetos que<br>
+            <span class="gradient-text">conectam ideias</span><br>
+            à tecnologia.
+          </h1>
+
+          <p class="hero-description">
+            O TECNOVA é um espaço dedicado a projetos práticos com Arduino,
+            automação e soluções inovadoras para o dia a dia.
+          </p>
+
+          <a class="outline-cta" href="#projetos">
+            Ver projetos <span>→</span>
+          </a>
+        </div>
+
+        <!-- ILUSTRAÇÃO TECNOLÓGICA FEITA EM CSS -->
+        <div class="hero-art" aria-label="Ilustração tecnológica">
+          <div class="hero-ring ring-one"></div>
+          <div class="hero-ring ring-two"></div>
+
+          <div class="circuit-board">
+            <div class="board-top">
+              <span></span><span></span><span></span>
+              <b>TN / 01</b>
+            </div>
+
+            <div class="board-chip">
+              <span>TN</span><b>+</b>
+            </div>
+
+            <div class="board-pin pin-top"></div>
+            <div class="board-pin pin-bottom"></div>
+            <div class="board-track track-left"></div>
+            <div class="board-track track-right"></div>
+
+            <i class="board-light light-one"></i>
+            <i class="board-light light-two"></i>
+            <i class="board-light light-three"></i>
+
+            <div class="board-label">ARDUINO</div>
+          </div>
+
+          <span class="floating-code code-one">01001</span>
+          <span class="floating-code code-two">10110</span>
+          <span class="floating-node node-one"></span>
+          <span class="floating-node node-two"></span>
+        </div>
+      </div>
+
+      <div class="hero-bottom container">
+        <span>TECNOLOGIA FEITA NA PRÁTICA</span>
+        <span class="hero-line"></span>
+        <span>DO PROJETO À INOVAÇÃO.</span>
+      </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section class="projects-section" id="projetos">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">NOSSOS PROJETOS</p>
+            <h2>Explore nossos <span class="gradient-text">projetos</span></h2>
+          </div>
+
+          <p class="section-intro">
+            Conheça nossas soluções com Arduino e descubra como a
+            tecnologia pode transformar tarefas do dia a dia.
+          </p>
+        </div>
+
+        <div class="project-grid">
+
+          <!-- PROJETO 1 -->
+          <article class="project-card">
+            <a class="project-image"
+               href="projetos/acesso.html"
+               aria-label="Ver projeto de controle de acesso">
+
+              <img
+                src="https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=1000&q=85"
+                alt="Equipamento eletrônico de controle de acesso"
+                loading="lazy">
+
+              <span class="project-tag">AUTOMAÇÃO</span>
+              <span class="image-shade"></span>
+            </a>
+
+            <div class="project-content">
+              <h3>Automação com Cartão</h3>
+
+              <p>
+                Sistema com Arduino e leitor RFID para identificar
+                cartões autorizados e controlar o acesso.
+              </p>
+
+              <a class="project-link" href="projetos/acesso.html">
+                Conhecer projeto <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJETO 2 -->
+          <article class="project-card">
+            <a class="project-image"
+               href="projetos/irrigacao.html"
+               aria-label="Ver projeto de irrigação automática">
+
+              <img
+                src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1000&q=85"
+                alt="Plantas em um jardim"
+                loading="lazy">
+
+              <span class="project-tag purple-tag">IRRIGAÇÃO</span>
+              <span class="image-shade"></span>
+            </a>
+
+            <div class="project-content">
+              <h3>Irrigação automática</h3>
+
+              <p>
+                Sistema que monitora a umidade do solo e automatiza
+                a irrigação para ajudar a economizar água.
+              </p>
+
+              <a class="project-link" href="projetos/irrigacao.html">
+                Conhecer projeto <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJETO 3 -->
+          <article class="project-card">
+            <a class="project-image"
+               href="projetos/gas.html"
+               aria-label="Ver projeto de sensor de gás MQ-2">
+
+              <img
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=85"
+                alt="Placa de circuito e componentes eletrônicos"
+                loading="lazy">
+
+              <span class="project-tag purple-tag">SENSORES</span>
+              <span class="image-shade"></span>
+            </a>
+
+            <div class="project-content">
+              <h3>Sensor de gás MQ-2</h3>
+
+              <p>
+                Protótipo com Arduino para detectar determinados
+                gases e fumaça e emitir alertas.
+              </p>
+
+              <a class="project-link" href="projetos/gas.html">
+                Conhecer projeto <span>→</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <a class="brand footer-brand" href="#inicio">
+        <span class="brand-mark">T<span>+</span></span>
+        <span>TECNO<span class="gradient-text">VA</span></span>
+      </a>
+
+      <p>Tecnologia hoje, soluções amanhã.</p>
+
+      <span class="copyright">
+        © <span id="year"></span> TECNOVA. Todos os direitos reservados.
+      </span>
+    </div>
+  </footer>
+
+</body>
+</html>

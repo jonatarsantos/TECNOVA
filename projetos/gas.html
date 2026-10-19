@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sensor de Gás MQ-2 | TECNOVA</title>
+  <link rel="stylesheet" href="projetos.css">
+  <style>:root { --cor-projeto: #ff812b; }</style>
+</head>
+<body>
+<header class="topo">
+  <div class="container topo-conteudo">
+    <a class="marca" href="../index.html">
+      <span class="marca-simbolo">T</span><span>TEC<span>NOVA</span></span>
+    </a>
+    <nav class="navegacao" aria-label="Navegação principal">
+      <a href="../index.html">Início</a>
+      <a href="../index.html#projetos">Projetos</a>
+      <a href="#funcionamento">Funcionamento</a>
+      <a href="#codigo">Código</a>
+    </nav>
+    <a class="botao-voltar" href="../index.html#projetos">← Voltar aos projetos</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero-projeto">
+    <div class="container hero-grade">
+      <div>
+        <span class="sobretitulo"><span class="ponto"></span> PROJETO 03 · SENSORES</span>
+        <h1>Detectar antes de ignorar: <span>sensor de gás MQ-2.</span></h1>
+        <p class="hero-descricao">
+          Como um circuito pode identificar mudanças na concentração de
+          certos gases? Este protótipo utiliza o sensor MQ-2 e o Arduino
+          para observar leituras e demonstrar como um alerta pode ser
+          acionado quando um limite configurado é ultrapassado.
+        </p>
+        <div class="hero-acoes">
+          <a class="botao-principal" href="#simulador">Testar simulação →</a>
+          <a class="botao-secundario" href="#componentes">Ver componentes</a>
+        </div>
+        <div class="indicadores">
+          <div class="indicador"><strong>MQ-2</strong><span>Sensor de gases combustíveis e fumaça</span></div>
+          <div class="indicador"><strong>Arduino</strong><span>Leitura e processamento</span></div>
+          <div class="indicador"><strong>Alerta</strong><span>Sinalização de um limite configurado</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="visual-icone">⚠️</div>
+        <span class="visual-legenda">SENSOR · MONITORAMENTO · ALERTA</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao">
+    <div class="container grade-dois">
+      <article class="painel">
+        <span class="sobretitulo">01 · CONCEITO</span>
+        <h3>O que é o MQ-2?</h3>
+        <p>
+          O MQ-2 é um sensor de gás do tipo semicondutor usado em
+          experimentos para detectar a presença de determinados gases
+          combustíveis e fumaça. Sua saída muda de acordo com as
+          condições do ambiente e precisa ser interpretada conforme
+          as especificações do fabricante.
+        </p>
+      </article>
+      <article class="painel">
+        <span class="sobretitulo">02 · OBJETIVO</span>
+        <h3>Como o protótipo ajuda?</h3>
+        <p>
+          O projeto ensina a ler um sensor, comparar valores e apresentar
+          um aviso visual ou sonoro. Ele permite compreender os princípios
+          de monitoramento, mas não substitui detectores certificados,
+          alarmes apropriados ou medidas de segurança.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="secao" id="componentes">
+    <div class="container">
+      <div class="secao-cabecalho">
+        <span class="sobretitulo">MATERIAIS E PREPARAÇÃO</span>
+        <h2>Componentes do protótipo</h2>
+      </div>
+      <div class="grade-dois">
+        <article class="painel">
+          <h3>Hardware necessário</h3>
+          <ul class="lista">
+            <li>Arduino Uno ou placa compatível.</li>
+            <li>Módulo sensor MQ-2 adequado à placa utilizada.</li>
+            <li>LED e resistor para demonstração de alerta.</li>
+            <li>Buzzer compatível, se necessário.</li>
+            <li>Protoboard, fios e cabo USB.</li>
+            <li>Computador com Arduino IDE.</li>
+          </ul>
+        </article>
+        <article class="painel">
+          <h3>O que será estudado?</h3>
+          <ul class="lista">
+            <li>Leitura de valores analógicos.</li>
+            <li>Comparação com limites de referência.</li>
+            <li>Acionamento de alertas.</li>
+            <li>Interpretação de sensores.</li>
+            <li>Calibração e limitações de medição.</li>
+          </ul>
+          <p class="aviso" style="margin-top:18px">
+            O MQ-2 pode exigir aquecimento e calibração. Siga a
+            documentação do módulo, mantenha a montagem ventilada
+            e não use chamas, vazamentos de gás ou fumaça perigosa
+            para testar o projeto.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao" id="funcionamento">
+    <div class="container">
+      <div class="secao-cabecalho">
+        <span class="sobretitulo">ETAPAS DO SISTEMA</span>
+        <h2>Como o detector trabalha?</h2>
+      </div>
+      <div class="passos">
+        <article class="passo"><h3>Detectar</h3><p>O sensor responde às condições de concentração de gases e fumaça a que é sensível.</p></article>
+        <article class="passo"><h3>Interpretar</h3><p>O Arduino lê o sinal e o compara com uma referência definida para o experimento.</p></article>
+        <article class="passo"><h3>Alertar</h3><p>Quando a condição programada é atingida, o protótipo pode acionar uma indicação visual ou sonora.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao" id="simulador">
+    <div class="container">
+      <div class="secao-cabecalho">
+        <span class="sobretitulo">LABORATÓRIO INTERATIVO</span>
+        <h2>Simule a leitura do sensor</h2>
+        <p>
+          Ajuste o nível ilustrativo e veja como o programa poderia
+          classificar a leitura. Isso não mede gases reais nem representa
+          uma concentração em ppm.
+        </p>
+      </div>
+      <div class="simulador">
+        <div class="simulador-topo">
+          <h3>Painel de monitoramento</h3>
+          <span id="gas-status" class="status">Nível baixo na simulação</span>
+        </div>
+        <div class="simulador-area">
+          <span class="simulador-icone">📟</span>
+          <strong>Nível ilustrativo: <span id="gas-valor">15%</span></strong>
+          <div class="barra"><span id="gas-barra" style="width:15%;background:linear-gradient(90deg,#ff812b,#ff3d54)"></span></div>
+          <p id="gas-mensagem">
+            O nível ilustrativo está abaixo do limite escolhido para esta demonstração.
+          </p>
+        </div>
+        <label for="gas-nivel" style="display:block;margin-top:18px">
+          Nível ilustrativo do sensor
+        </label>
+        <input id="gas-nivel" type="range" min="0" max="100" value="15"
+          style="width:100%;accent-color:var(--cor-projeto);margin-top:12px">
+        <div style="display:flex;justify-content:space-between;color:var(--texto);font-size:.82rem">
+          <span>0 · Baixo</span><span>100 · Elevado</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao" id="codigo">
+    <div class="container">
+      <div class="secao-cabecalho">
+        <span class="sobretitulo">PROGRAMAÇÃO</span>
+        <h2>Exemplo de leitura analógica</h2>
+        <p>
+          Este exemplo demonstra a leitura do pino analógico e a
+          comparação com um limite experimental. O valor precisa
+          ser ajustado conforme o sensor, o módulo e as condições
+          da montagem. Não é um detector de segurança pronto para uso.
+        </p>
+      </div>
+      <div class="codigo-caixa">
+        <div class="codigo-topo">
+          <span>Arduino / C++ · exemplo didático</span>
+          <button class="botao-copiar" data-copiar="codigo-gas">Copiar código</button>
+        </div>
+        <pre><code id="codigo-gas">const int pinoSensor = A0;
+const int limiteAlerta = 400;
+const int pinoLed = 8;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(pinoLed, OUTPUT);
+}
+
+void loop() {
+  int leitura = analogRead(pinoSensor);
+
+  Serial.print("Leitura analogica: ");
+  Serial.println(leitura);
+
+  if (leitura >= limiteAlerta) {
+    digitalWrite(pinoLed, HIGH);
+    Serial.println("Alerta experimental");
+  } else {
+    digitalWrite(pinoLed, LOW);
+    Serial.println("Abaixo do limite");
+  }
+
+  delay(500);
+}</code></pre>
+      </div>
+      <p class="aviso" style="margin-top:16px">
+        O valor 400 é apenas um exemplo e não corresponde a um limite
+        universal de segurança. O sensor não fornece uma medição
+        confiável de concentração sem caracterização e calibração
+        adequadas.
+      </p>
+    </div>
+  </section>
+
+  <section class="secao">
+    <div class="container">
+      <div class="secao-cabecalho">
+        <span class="sobretitulo">APLICAÇÕES E LIMITAÇÕES</span>
+        <h2>Tecnologia para compreender riscos</h2>
+      </div>
+      <div class="grade-dois">
+        <article class="painel">
+          <h3>Aplicações educacionais</h3>
+          <p>
+            Experimentos de automação, leitura de sensores, sistemas
+            de alerta didáticos e projetos que demonstram como dados
+            ambientais podem ser transformados em sinais.
+          </p>
+        </article>
+        <article class="painel">
+          <h3>Segurança em primeiro lugar</h3>
+          <p>
+            Um protótipo com Arduino e MQ-2 não deve ser usado como
+            único meio de proteção de uma residência. Instale detectores
+            certificados adequados ao risco e siga as orientações de
+            segurança aplicáveis.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao">
+    <div class="container">
+      <div class="secao-cabecalho">
+        <span class="sobretitulo">DÚVIDAS FREQUENTES</span>
+        <h2>Antes de montar</h2>
+      </div>
+      <div class="perguntas">
+        <details class="pergunta">
+          <summary>O MQ-2 detecta todos os gases?</summary>
+          <p>Não. Sua sensibilidade depende do gás, das condições ambientais e do modelo. Ele não é um detector universal.</p>
+        </details>
+        <details class="pergunta">
+          <summary>O simulador está lendo o sensor do meu computador?</summary>
+          <p>Não. O controle da página altera somente um valor ilustrativo no navegador. Não há conexão com hardware.</p>
+        </details>
+        <details class="pergunta">
+          <summary>Posso testar com gás ou fogo em casa?</summary>
+          <p>Não faça testes com vazamentos, chamas ou fumaça perigosa. Para aprender, utilize a simulação da página e testes apropriados, supervisionados e sem exposição a riscos.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="container rodape-conteudo">
+    <span>© <span data-ano></span> TECNOVA · Tecnologia hoje, soluções amanhã.</span>
+    <a href="../index.html#projetos">← Conhecer outros projetos</a>
+  </div>
+</footer>
+<script src="projetos.js"></script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Irrigação Automática | TECNOVA</title>
+  <link rel="stylesheet" href="projetos.css">
+  <style>:root { --cor-projeto: #4ee5b1; }</style>
+</head>
+<body>
+<header class="topo">
+  <div class="container topo-conteudo">
+    <a class="marca" href="../index.html">
+      <span class="marca-simbolo">T</span><span>TEC<span>NOVA</span></span>
+    </a>
+    <nav class="navegacao" aria-label="Navegação principal">
+      <a href="../index.html">Início</a>
+      <a href="../index.html#projetos">Projetos</a>
+      <a href="#funcionamento">Funcionamento</a>
+      <a href="#codigo">Código</a>
+    </nav>
+    <a class="botao-voltar" href="../index.html#projetos">← Voltar aos projetos</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero-projeto">
+    <div class="container hero-grade">
+      <div>
+        <span class="sobretitulo"><span class="ponto"></span> PROJETO 02 · SUSTENTABILIDADE</span>
+        <h1>Água na medida certa com <span>irrigação automática.</span></h1>
+        <p class="hero-descricao">
+          Um sistema inteligente acompanha a umidade do solo e pode
+          acionar uma bomba quando a terra estiver seca. O objetivo é
+          ajudar a cuidar das plantas e evitar a irrigação desnecessária.
+        </p>
+        <div class="hero-acoes">
+          <a class="botao-principal" href="#simulador">Testar umidade →</a>
+          <a class="botao-secundario" href="#componentes">Ver componentes</a>
+        </div>
+        <div class="indicadores">
+          <div class="indicador"><strong>Sensor</strong><span>Mede a umidade do solo</span></div>
+          <div class="indicador"><strong>Controle</strong><span>Arduino processa a leitura</span></div>
+          <div class="indicador"><strong>Economia</strong><span>Irrigação conforme a necessidade</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="visual-icone">🌱</div>
+        <span class="visual-legenda">SOLO · SENSOR · ÁGUA</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao">
+    <div class="container grade-dois">
+      <article class="painel">
+        <span class="sobretitulo">01 · CONCEITO</span>
+        <h3>O que é irrigação automática?</h3>
+        <p>
+          É um sistema que utiliza sensores e um controlador para
+          decidir quando irrigar. Em vez de depender apenas de horários,
+          o projeto pode usar a condição do solo como referência para
+          acionar ou desligar uma bomba ou válvula.
+        </p>
+      </article>
+      <article class="painel">
+        <span class="sobretitulo">02 · OBJETIVO</span>
+        <h3>Como a automação ajuda?</h3>
+        <p>
+          O protótipo demonstra como monitorar a umidade, definir um
+          limite de acionamento e controlar a irrigação. Os resultados
+          dependem do sensor, da planta, do solo e da calibração.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="secao" id="componentes">
+    <div class="container">
+      <div class="secao-cabecalho">
+        <span class="sobretitulo">MATERIAIS E PREPARAÇÃO</span>
+        <h2>O que será necessário?</h2>
+      </div>
+      <div class="grade-dois">
+        <article class="painel">
+          <h3>Hardware necessário</h3>
+          <ul class="lista">
+            <li>Arduino Uno ou placa compatível.</li>
+            <li>Sensor capacitivo de umidade do solo.</li>
+            <li>Bomba de água de baixa tensão ou válvula adequada.</li>
+            <li>Módulo de acionamento compatível com a bomba.</li>
+            <li>Mangueira, reservatório e recipiente para a planta.</li>
+            <li>Fonte adequada, fios e protoboard para o circuito de controle.</li>
+          </ul>
+        </article>
+        <article class="painel">
+          <h3>Conceitos importantes</h3>
+          <ul class="lista">
+            <li>Leitura de entradas analógicas.</li>
+            <li>Calibração de sensores.</li>
+            <li>Uso de limites para tomada de decisão.</li>
+            <li>Acionamento de cargas com módulo apropriado.</li>
+            <li>Monitoramento do consumo de água.</li>
+          </ul>
+          <p class="aviso" style="margin-top:18px">
+            Não ligue uma bomba diretamente a um pino do Arduino.
+            Utilize um circuito de acionamento dimensionado para a carga,
+            com alimentação apropriada e proteção elétrica.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao" id="funcionamento">
+    <div class="container">
+      <div class="secao-cabecalho">
+        <span class="sobretitulo">ETAPAS DO SISTEMA</span>
+        <h2>Do solo seco à irrigação</h2>
+      </div>
+      <div class="passos">
+        <article class="passo"><h3>Medir</h3><p>O sensor fornece uma leitura relacionada à umidade do solo.</p></article>
+        <article class="passo"><h3>Comparar</h3><p>O Arduino compara a leitura com um limite definido após a calibração.</p></article>
+        <article class="passo"><h3>Irrigar</h3><p>Se necessário, o controlador aciona a bomba por um circuito apropriado e verifica novamente a condição do solo.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao" id="simulador">
+    <div class="container">
+      <div class="secao-cabecalho">
+        <span class="sobretitulo">LABORATÓRIO INTERATIVO</span>
+        <h2>Controle a umidade da planta</h2>
+        <p>Mova o controle e veja como o sistema reagiria. Os valores são ilustrativos, não uma medição real.</p>
+      </div>
+      <div class="simulador">
+        <div class="simulador-topo">
+          <h3>Sensor de umidade virtual</h3>
+          <span id="irrigacao-status" class="status">Analisando</span>
+        </div>
+        <div class="simulador-area">
+          <span class="simulador-icone">🌿</span>
+          <strong>Umidade simulada: <span id="umidade-valor">50%</span></strong>
+          <div class="barra"><span id="irrigacao-barra"></span></div>
+          <p id="irrigacao-mensagem">Ajuste o nível para testar o comportamento do sistema.</p>
+        </div>
+        <label for="umidade" style="display:block;margin-top:18px">Solo seco ← → Solo úmido</label>
+        <input id="umidade" type="range" min="0" max="100" value="50" style="width:100%;accent-color:var(--cor-projeto);margin-top:12px">
+        <div style="display:flex;justify-content:space-between;color:var(--texto);font-size:.82rem">
+          <span>0% · Seco</span><span>100% · Úmido</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao" id="codigo">
+    <div class="container">
+      <div class="secao-cabecalho">
+        <span class="sobretitulo">PROGRAMAÇÃO</span>
+        <h2>Exemplo de lógica em Arduino</h2>
+        <p>
+          O exemplo mostra a comparação de uma leitura analógica com
+          um limite. Os valores dependem do sensor e devem ser
+          calibrados. O trecho não deve acionar uma bomba sem o
+          circuito de potência adequado.
+        </p>
+      </div>
+      <div class="codigo-caixa">
+        <div class="codigo-topo">
+          <span>Arduino / C++ · exemplo didático</span>
+          <button class="botao-copiar" data-copiar="codigo-irrigacao">Copiar código</button>
+        </div>
+        <pre><code id="codigo-irrigacao">const int pinoSensor = A0;
+const int limiteSeco = 600;
+
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  int leitura = analogRead(pinoSensor);
+
+  Serial.print("Leitura do sensor: ");
+  Serial.println(leitura);
+
+  if (leitura > limiteSeco) {
+    Serial.println("Solo possivelmente seco");
+    // Acionamento deve ser integrado
+    // a um módulo apropriado.
+  } else {
+    Serial.println("Umidade dentro do limite");
+    // Manter a bomba desligada.
+  }
+
+  delay(1000);
+}</code></pre>
+      </div>
+      <p class="aviso" style="margin-top:16px">
+        Em muitos sensores analógicos, a leitura aumenta quando o solo
+        está mais seco, mas isso varia por modelo. Calibre o sensor
+        antes de definir o limite e teste o comportamento com segurança.
+      </p>
+    </div>
+  </section>
+
+  <section class="secao">
+    <div class="container">
+      <div class="secao-cabecalho">
+        <span class="sobretitulo">APLICAÇÕES E APRENDIZADO</span>
+        <h2>Da sala de aula para o cotidiano</h2>
+      </div>
+      <div class="grade-dois">
+        <article class="painel"><h3>Onde aplicar?</h3><p>Vasos, pequenas hortas, jardins e demonstrações de agricultura automatizada, sempre adaptando o projeto às necessidades de cada planta.</p></article>
+        <article class="painel"><h3>O que você aprende?</h3><p>Sensores analógicos, calibração, automação, lógica de controle, acionamento de cargas e uso consciente da água.</p></article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="container rodape-conteudo">
+    <span>© <span data-ano></span> TECNOVA · Tecnologia hoje, soluções amanhã.</span>
+    <a href="../index.html#projetos">← Conhecer outros projetos</a>
+  </div>
+</footer>
+<script src="projetos.js"></script>
+</body>
+</html>
